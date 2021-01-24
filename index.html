@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
+    <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <main>	
-        <div><p id="display"></p></div>
-            <section>
+        <section class='calcDisp'><p id="display"></p></section>
+            <section class="useCalc">
                 <ul class="numPad">
                     <li><button class="doMath">9</button></li>
                     <li><button class="doMath">8</button></li>
@@ -25,7 +26,7 @@
                     <li><button class="doMath">1</button></li>
                     
                     <li><button class="doMath">0</button></li>
-                    <li><button id="clearDisp">clear</button></li>
+                    <li class="clearBtn"><button id="clearDisp">clear</button></li>
                     
         
                 </ul>
@@ -37,7 +38,12 @@
                     <li><button class="doMath"> = </button></li>
                 </ul>
             </section>
+            <section class="instructions">
+                <h3>Keyboard Instructions:</h3>
+                <p>Spacebar to clear display</p>
+                <p>Enter to calculate</p>
+            </section>
         </main>
-        <script type="text/javascript" src="newmain.js"></script>
+        <script type="text/javascript" src="main.js"></script>
 </body>
 </html>
