@@ -23,6 +23,28 @@ Lighter Grey: #DCE1E3
 	border-radius: 8px;
 }
 
+kbr, .contact > * {
+	font-family: Consolas;
+	font-size: 1.2rem;
+	background-color: #DCE1E3;
+	padding: .2rem;
+}
+
+.svg-icon {
+	width: 1em;
+	height: 1em;
+  }
+  .svg-icon path,
+  .svg-icon polygon,
+  .svg-icon rect {
+	fill: black;
+  }
+  .svg-icon circle {
+	stroke: #DCE1E3;
+	stroke-width: 2;
+  }
+
+
 main{
 	padding: 1vmin 2vmin; 
 	background-color: white;
@@ -36,11 +58,14 @@ h3 {
 }
 
 
-section {margin-bottom: 2vmin;}
+main > section {
+	margin-bottom: 2vmin;
+	min-width: 225px;
+	display: flex;
+}
 .calcDisp {
     background-color: #DCE1E3;
 	
-	display: flex;
 	justify-content: flex-end;
 	align-items: flex-end;
 	
@@ -56,12 +81,7 @@ section, button {
 	border-right: 1px solid #5C5F58;
 }
 #display {margin: .2rem .5rem;}
-section {
-	height: 40vw;
-	min-height: 300px;
-	min-width: 225px;
-	display: flex;
-}
+
 ul {
 	list-style: none;
 	display: flex;
@@ -84,14 +104,29 @@ button{
 }
 
 .clearBtn, #clearDisp {width: 34vw;}
+.notesAndContact {
+	justify-content: center;
+	align-items: center;
+	padding: 1rem;
+}
+.notesAndContact > * {border: none;}
+.instructions {
+	padding: .3rem;
+	margin-right: .8rem;
+	border-left: .6px dotted black;
+	border-right: .6px dotted black;
 
-.instructions {padding: .3rem;}
+}
 .instructions * {line-height: 1.5;}
 .instructions, .instructions p {
 	font-size: 1.2rem;
 	min-height: 0; 
 	height: auto; 
 	display: block;
+}
+.contactP{
+	text-align:center;
+	margin-bottom: .3rem;
 }
 
 @media screen and (min-width: 330px) {
