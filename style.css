@@ -1,42 +1,105 @@
+/* 
+Red Highlight: #B73225
+
+Blue Minded: #004E7C
+
+Maroon 6: #591COB
+
+Grey Water: #5C5F58
+
+Lighter Grey: #DCE1E3
+
+*/
+/* Box Model Hack */
 * {
-	font-family: sans-serif;
-	font-size: 1.2rem;
-	border-radius: 5px;
+	box-sizing: border-box;
+  }
+
+* {
+    color: #B73225;
+    font-weight: 600;
+	font-family: 'Palatino', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	font-size: 1.4rem;
+	border-radius: 8px;
 }
-#display {
+
+main{
+	padding: 1vmin 2vmin; 
+	background-color: white;
+}
+
+h3 {
+	text-transform: uppercase;
+	border-bottom: 1px dotted black;
+	border-radius: 0;
+	display: inline-block;
+}
+
+
+section {margin-bottom: 2vmin;}
+.calcDisp {
+    background-color: #DCE1E3;
+	
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-end;
+	
 	text-align: right; 
-	height: 10vh;
-	border: 1px dotted black;
-	margin: 1rem;
+	height: 10vmin;
+	min-height: 50px;
+	min-width: 100%;
 }
-section, #display {
-	width: 90vw;
-	padding: 2vw;
+
+section, button {
+	border: 1px solid black;
+	border-bottom: 3px solid #5C5F58;
+	border-right: 1px solid #5C5F58;
 }
+#display {margin: .2rem .5rem;}
 section {
-	height: 40vh;
+	height: 40vw;
+	min-height: 300px;
+	min-width: 225px;
 	display: flex;
 }
 ul {
 	list-style: none;
 	display: flex;
-	height: 100%;
 }
-ul + ul {padding-top: 0.25rem;}
+
 li, li * {
-	width: 18vw;
+	width: 15vw;
 	text-align: center;
 	margin: 0.2rem;
 }
 button{
-	background:none; 
-	border: 1px solid black;
+    background-color: #DCE1E3;
 }
-
-.numPad {
+.useCalc {padding: 1rem;}
+.numPad, .mathBtns {
 	flex-direction: row-reverse;
 	flex-wrap: wrap;
+	justify-content: space-around;
+	align-content: space-between;
 }
-.numPad  * {height: 12vh;}
-.mathBtns {flex-direction: column;}
-.mathBtns * {height: 9vh;}
+
+.clearBtn, #clearDisp {width: 34vw;}
+
+.instructions {padding: .3rem;}
+.instructions * {line-height: 1.5;}
+.instructions, .instructions p {
+	font-size: 1.2rem;
+	min-height: 0; 
+	height: auto; 
+	display: block;
+}
+
+@media screen and (min-width: 330px) {
+    main {padding: 2vw 10vw;}
+}
+
+@media screen and (min-width: 800px) {
+	* {font-size: 2rem;}
+    button {padding: 0.5rem;}
+    li, li * {width: 15vw;}
+}
